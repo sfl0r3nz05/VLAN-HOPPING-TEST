@@ -3,9 +3,9 @@ import threading
 import time
 
 class VLANSpoofingAttack:
-    def __init__(self, 
-                 target1_ip, 
-                 target2_ip, 
+    def __init__(self,
+                 target1_ip,
+                 target2_ip,
                  attacker_ip,
                  interface):
         """
@@ -104,10 +104,10 @@ class VLANSpoofingAttack:
 
 def main():
     attack = VLANSpoofingAttack(
-        target1_ip='192.168.1.10',    # First victim IP
-        target2_ip='192.168.1.11',    # Second victim IP
-        attacker_ip='192.168.1.12',   # Attacker IP
-        interface='eth0'              # Your network interface
+        target1_ip='192.168.1.5',    # First victim IP
+        target2_ip='192.168.1.6',    # Second victim IP
+        attacker_ip='192.168.2.5',   # Attacker IP
+        interface='enp0s3'              # Your network interface
     )
     attack.start_attack()
 

